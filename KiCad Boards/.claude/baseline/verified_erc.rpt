@@ -1,0 +1,762 @@
+ERC report (2026-08-01T20:25:09, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(125.73 mm, 146.05 mm): Symbol C30 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(167.79 mm, 276.10 mm): Symbol C33 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(170.18 mm, 146.05 mm): Symbol C71 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(176.68 mm, 276.10 mm): Symbol C32 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(185.57 mm, 276.10 mm): Symbol C31 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(193.04 mm, 312.42 mm): Symbol R19 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(202.08 mm, 273.56 mm): Symbol R22 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(208.28 mm, 270.51 mm): Symbol R23 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(215.90 mm, 265.43 mm): Symbol R24 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(220.98 mm, 334.01 mm): Symbol R25 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(232.41 mm, 378.46 mm): Symbol R48 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(232.41 mm, 388.62 mm): Symbol CGQ1 Pin 2 [A, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(278.13 mm, 331.47 mm): Symbol C44 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(289.56 mm, 387.35 mm): Symbol IR1 Pin 1 [C, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(299.72 mm, 173.99 mm): Symbol C36 Pin 2 [2, Input, Line]
+[wire_dangling]: Wires not connected to anything
+    ; error
+    @(302.26 mm, 289.56 mm): Vertical Wire, length 2.54 mm
+[wire_dangling]: Wires not connected to anything
+    ; error
+    @(312.42 mm, 284.48 mm): Vertical Wire, length 2.54 mm
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(316.62 mm, 260.00 mm): Symbol C75 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(316.62 mm, 270.00 mm): Symbol C76 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(326.78 mm, 260.00 mm): Symbol C75 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(392.43 mm, 258.32 mm): Symbol C81 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(392.43 mm, 282.32 mm): Symbol R61 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(402.59 mm, 258.32 mm): Symbol C81 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(402.59 mm, 282.32 mm): Symbol R61 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(402.59 mm, 298.32 mm): Symbol R63 Pin 2 [2, Input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(450.85 mm, 160.02 mm): Symbol #PWR? Pin 1 [Power input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(452.12 mm, 58.42 mm): Symbol USB1 Pin 6 [DP1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(452.12 mm, 60.96 mm): Symbol USB1 Pin 5 [DN2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(469.90 mm, 48.26 mm): Symbol R2 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(469.90 mm, 63.50 mm): Symbol R3 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(509.27 mm, 276.86 mm): Symbol C63 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(518.16 mm, 276.86 mm): Symbol C62 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(527.05 mm, 276.86 mm): Symbol C61 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(541.02 mm, 274.32 mm): Symbol R35 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(553.72 mm, 271.78 mm): Symbol R36 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(554.99 mm, 334.01 mm): Symbol R34 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(563.88 mm, 269.24 mm): Symbol R37 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(588.01 mm, 163.83 mm): Symbol R32 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(595.63 mm, 335.28 mm): Symbol R38 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(596.90 mm, 190.50 mm): Symbol C48 Pin 2 [2, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(600.71 mm, 96.52 mm): Symbol LED2 Pin 2 [A, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(607.06 mm, 171.45 mm): Symbol D3 Pin 2 [A, Input, Line]
+[wire_dangling]: Wires not connected to anything
+    ; error
+    @(655.32 mm, 289.56 mm): Vertical Wire, length 2.54 mm
+[wire_dangling]: Wires not connected to anything
+    ; error
+    @(665.48 mm, 284.48 mm): Vertical Wire, length 2.54 mm
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(669.68 mm, 260.00 mm): Symbol C78 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(669.68 mm, 270.00 mm): Symbol C79 Pin 1 [1, Input, Line]
+[pin_not_driven]: Input pin not driven by any Output pins
+    ; error
+    @(679.84 mm, 260.00 mm): Symbol C78 Pin 2 [2, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(115.57 mm, 246.54 mm): Symbol R49 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(115.57 mm, 251.54 mm): Symbol R50 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(115.57 mm, 261.54 mm): Symbol R52 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(167.79 mm, 273.56 mm): Horizontal Wire, length 24.13 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(167.79 mm, 276.10 mm): Vertical Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(167.79 mm, 283.72 mm): Symbol C33 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(167.79 mm, 283.72 mm): Horizontal Wire, length 8.89 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(171.60 mm, 267.97 mm): Vertical Wire, length 1.78 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(167.64 mm, 267.97 mm): Horizontal Wire, length 3.96 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(171.60 mm, 269.75 mm): Wire, length 26.531 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(171.60 mm, 269.75 mm): Vertical Wire, length 1.27 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(171.60 mm, 271.02 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(176.68 mm, 276.10 mm): Vertical Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(176.68 mm, 283.72 mm): Horizontal Wire, length 8.89 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(176.68 mm, 283.72 mm): Symbol C32 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(180.49 mm, 262.89 mm): Vertical Wire, length 1.78 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(167.64 mm, 262.89 mm): Horizontal Wire, length 12.85 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(180.49 mm, 264.67 mm): Vertical Wire, length 3.81 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(180.49 mm, 264.67 mm): Wire, length 25.261 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(180.49 mm, 268.48 mm): Horizontal Wire, length 5.08 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(185.57 mm, 276.10 mm): Vertical Wire, length 7.62 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(185.57 mm, 276.10 mm): Symbol C31 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(191.77 mm, 82.55 mm): Symbol U12 Pin 1 [GND, Unspecified, Line]
+    @(234.95 mm, 82.55 mm): Symbol U12 Pin 40 [GND, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 85.09 mm): Symbol U12 Pin 2 [3V3, Unspecified, Line]
+    @(170.18 mm, 133.35 mm): Symbol R39 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 87.63 mm): Symbol U12 Pin 3 [EN, Unspecified, Line]
+    @(125.73 mm, 143.51 mm): Symbol R28 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(191.77 mm, 90.17 mm): Symbol U12 Pin 4 [IO4, Unspecified, Line]
+    @(593.09 mm, 278.13 mm): Symbol U15 Pin 3 [ENA/LSA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 92.71 mm): Symbol U12 Pin 5 [IO5, Unspecified, Line]
+    @(205.74 mm, 265.43 mm): Symbol R24 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 95.25 mm): Symbol U12 Pin 6 [IO6, Unspecified, Line]
+    @(198.12 mm, 270.51 mm): Symbol R23 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 97.79 mm): Symbol U12 Pin 7 [IO7, Unspecified, Line]
+    @(191.92 mm, 273.56 mm): Symbol R22 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 100.33 mm): Symbol U12 Pin 8 [IO15, Unspecified, Line]
+    @(527.05 mm, 276.86 mm): Symbol C61 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 102.87 mm): Symbol U12 Pin 9 [IO16, Unspecified, Line]
+    @(518.16 mm, 276.86 mm): Symbol C62 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 105.41 mm): Symbol U12 Pin 10 [IO17, Unspecified, Line]
+    @(509.27 mm, 276.86 mm): Symbol C63 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(191.77 mm, 107.95 mm): Symbol U12 Pin 11 [IO18, Unspecified, Line]
+    @(240.03 mm, 288.29 mm): Symbol U14 Pin 6 [PWMA/HSA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(191.77 mm, 110.49 mm): Symbol U12 Pin 12 [IO8, Unspecified, Line]
+    @(240.03 mm, 290.83 mm): Symbol U14 Pin 7 [PWMB/HSB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 113.03 mm): Symbol U12 Pin 13 [IO19, Unspecified, Line]
+    @(452.12 mm, 60.96 mm): Symbol USB1 Pin 5 [DN2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(191.77 mm, 115.57 mm): Symbol U12 Pin 14 [IO20, Unspecified, Line]
+    @(452.12 mm, 58.42 mm): Symbol USB1 Pin 6 [DP1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(191.92 mm, 273.56 mm): Symbol R22 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(193.04 mm, 312.42 mm): Symbol D1 Pin 1 [K, Unspecified, Line]
+    @(193.04 mm, 312.42 mm): Symbol R19 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(193.04 mm, 322.58 mm): Symbol D1 Pin 2 [A, Unspecified, Line]
+    @(185.57 mm, 283.72 mm): Symbol C31 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(199.39 mm, 128.27 mm): Symbol U12 Pin 15 [IO3, Unspecified, Line]
+    @(240.03 mm, 293.37 mm): Symbol U14 Pin 8 [PWMC/HSC, Unspecified, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(202.08 mm, 273.56 mm): Wire, length 4.572 mm
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(204.47 mm, 128.27 mm): Symbol U12 Pin 17 [IO9, Unspecified, Line]
+    @(240.03 mm, 278.13 mm): Symbol U14 Pin 3 [ENA/LSA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(207.01 mm, 128.27 mm): Symbol U12 Pin 18 [IO10, Unspecified, Line]
+    @(240.03 mm, 280.67 mm): Symbol U14 Pin 4 [ENB/LSB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(209.55 mm, 128.27 mm): Symbol U12 Pin 19 [IO11, Unspecified, Line]
+    @(240.03 mm, 298.45 mm): Symbol U14 Pin 1 [nFAULT, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(212.09 mm, 128.27 mm): Symbol U12 Pin 20 [IO12, Unspecified, Line]
+    @(593.09 mm, 298.45 mm): Symbol U15 Pin 1 [nFAULT, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(217.17 mm, 128.27 mm): Symbol U12 Pin 22 [IO14, Unspecified, Line]
+    @(240.03 mm, 283.21 mm): Symbol U14 Pin 5 [ENC/LSC, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(219.71 mm, 128.27 mm): Symbol U12 Pin 23 [IO21, Unspecified, Line]
+    @(593.09 mm, 288.29 mm): Symbol U15 Pin 6 [PWMA/HSA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(222.25 mm, 128.27 mm): Symbol U12 Pin 24 [IO47, Unspecified, Line]
+    @(593.09 mm, 290.83 mm): Symbol U15 Pin 7 [PWMB/HSB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(224.79 mm, 128.27 mm): Symbol U12 Pin 25 [IO48, Unspecified, Line]
+    @(593.09 mm, 293.37 mm): Symbol U15 Pin 8 [PWMC/HSC, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(234.95 mm, 77.47 mm): Symbol U12 Pin 41 [GND, Unspecified, Line]
+    @(170.18 mm, 156.21 mm): Symbol C71 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(234.95 mm, 82.55 mm): Symbol U12 Pin 40 [GND, Unspecified, Line]
+    @(234.95 mm, 77.47 mm): Symbol U12 Pin 41 [GND, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(234.95 mm, 85.09 mm): Symbol U12 Pin 39 [IO1, Unspecified, Line]
+    @(232.41 mm, 378.46 mm): Symbol R48 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(234.95 mm, 87.63 mm): Symbol U12 Pin 38 [IO2, Unspecified, Line]
+    @(289.56 mm, 387.35 mm): Symbol IR1 Pin 1 [C, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(234.95 mm, 110.49 mm): Symbol U12 Pin 29 [IO36, Unspecified, Line]
+    @(593.09 mm, 283.21 mm): Symbol U15 Pin 5 [ENC/LSC, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(234.95 mm, 113.03 mm): Symbol U12 Pin 28 [IO35, Unspecified, Line]
+    @(593.09 mm, 280.67 mm): Symbol U15 Pin 4 [ENB/LSB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(234.95 mm, 115.57 mm): Symbol U12 Pin 27 [IO0, Unspecified, Line]
+    @(170.18 mm, 143.51 mm): Symbol R39 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(240.03 mm, 273.05 mm): Symbol U14 Pin 2 [nSLEEP, Unspecified, Line]
+    @(193.04 mm, 312.42 mm): Symbol R19 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(240.03 mm, 298.45 mm): Symbol U14 Pin 1 [nFAULT, Unspecified, Line]
+    @(220.98 mm, 334.01 mm): Symbol R25 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(240.03 mm, 303.53 mm): Symbol U14 Pin 15 [SOA, Unspecified, Line]
+    @(215.90 mm, 265.43 mm): Symbol R24 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(240.03 mm, 306.07 mm): Symbol U14 Pin 16 [SOB, Unspecified, Line]
+    @(208.28 mm, 270.51 mm): Symbol R23 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(240.03 mm, 308.61 mm): Symbol U14 Pin 17 [SOC, Unspecified, Line]
+    @(202.08 mm, 273.56 mm): Symbol R22 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(240.03 mm, 313.69 mm): Symbol U14 Pin 18 [GND, Unspecified, Line]
+    @(265.43 mm, 340.36 mm): Symbol C73 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(271.78 mm, 173.99 mm): Symbol C37 Pin 2 [2, Unspecified, Line]
+    @(279.40 mm, 173.99 mm): Symbol C38 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(271.78 mm, 184.15 mm): Symbol C37 Pin 1 [1, Unspecified, Line]
+    @(279.40 mm, 184.15 mm): Symbol C38 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(292.10 mm, 173.99 mm): Symbol C40 Pin 2 [2, Unspecified, Line]
+    @(299.72 mm, 173.99 mm): Symbol C36 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(292.10 mm, 184.15 mm): Symbol C40 Pin 1 [1, Unspecified, Line]
+    @(299.72 mm, 184.15 mm): Symbol C36 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(293.37 mm, 267.97 mm): Symbol U14 Pin 20 [CP1, Unspecified, Line]
+    @(316.62 mm, 260.00 mm): Symbol C75 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(293.37 mm, 270.51 mm): Symbol U14 Pin 21 [CP2, Unspecified, Line]
+    @(326.78 mm, 260.00 mm): Symbol C75 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(293.37 mm, 280.67 mm): Symbol U14 Pin 23 [VIN, Unspecified, Line]
+    @(293.37 mm, 283.21 mm): Symbol U14 Pin 25 [VIN, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(293.37 mm, 283.21 mm): Symbol U14 Pin 25 [VIN, Unspecified, Line]
+    @(290.83 mm, 331.47 mm): Symbol C45 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(293.37 mm, 288.29 mm): Symbol U14 Pin 14 [VG, Unspecified, Line]
+    @(316.62 mm, 270.00 mm): Symbol C76 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(293.37 mm, 293.37 mm): Symbol U14 Pin 9 [SA, Unspecified, Line]
+    @(293.37 mm, 295.91 mm): Symbol U14 Pin 26 [SA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(293.37 mm, 300.99 mm): Symbol U14 Pin 11 [SB, Unspecified, Line]
+    @(293.37 mm, 303.53 mm): Symbol U14 Pin 24 [SB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(293.37 mm, 311.15 mm): Symbol U14 Pin 13 [SC, Unspecified, Line]
+    @(293.37 mm, 308.61 mm): Symbol U14 Pin 22 [SC, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(293.37 mm, 316.23 mm): Symbol U14 Pin 10 [LSS, Unspecified, Line]
+    @(293.37 mm, 318.77 mm): Symbol U14 Pin 12 [LSS, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(293.37 mm, 318.77 mm): Symbol U14 Pin 12 [LSS, Unspecified, Line]
+    @(290.83 mm, 341.63 mm): Symbol C45 Pin 1 [1, Input, Line]
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(302.26 mm, 289.56 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(302.26 mm, 289.56 mm): Vertical Wire, length 2.54 mm
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(312.42 mm, 173.99 mm): Symbol C41 Pin 2 [2, Unspecified, Line]
+    @(320.04 mm, 173.99 mm): Symbol C42 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(312.42 mm, 184.15 mm): Symbol C41 Pin 1 [1, Unspecified, Line]
+    @(320.04 mm, 184.15 mm): Symbol C42 Pin 1 [1, Input, Line]
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(312.42 mm, 284.48 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(312.42 mm, 284.48 mm): Vertical Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(316.62 mm, 250.00 mm): Symbol C74 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(316.62 mm, 250.00 mm): Symbol C74 Pin 1 [1, Unspecified, Line]
+    @(293.37 mm, 275.59 mm): Symbol U14 Pin 19 [VCP, Unspecified, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(316.62 mm, 260.00 mm): Symbol C75 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(316.62 mm, 270.00 mm): Symbol C76 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(321.31 mm, 304.80 mm): Symbol CN3 Pin 1 [1, Unspecified, Line]
+    @(293.37 mm, 295.91 mm): Symbol U14 Pin 26 [SA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(321.31 mm, 307.34 mm): Symbol CN3 Pin 2 [2, Unspecified, Line]
+    @(293.37 mm, 303.53 mm): Symbol U14 Pin 24 [SB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(321.31 mm, 309.88 mm): Symbol CN3 Pin 3 [3, Unspecified, Line]
+    @(293.37 mm, 311.15 mm): Symbol U14 Pin 13 [SC, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(326.78 mm, 250.00 mm): Symbol C74 Pin 2 [2, Unspecified, Line]
+    @(293.37 mm, 280.67 mm): Symbol U14 Pin 23 [VIN, Unspecified, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(392.43 mm, 250.32 mm): Symbol C80 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(392.43 mm, 258.32 mm): Symbol C81 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(392.43 mm, 266.32 mm): Symbol L3 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(392.43 mm, 266.32 mm): Symbol L3 Pin 1 [1, Unspecified, Line]
+    @(402.59 mm, 258.32 mm): Symbol C81 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(392.43 mm, 274.32 mm): Symbol C82 Pin 1 [1, Unspecified, Line]
+    @(392.43 mm, 282.32 mm): Symbol R61 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(392.43 mm, 282.32 mm): Symbol R61 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(392.43 mm, 290.32 mm): Symbol R62 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(392.43 mm, 298.32 mm): Symbol R63 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(402.59 mm, 266.32 mm): Symbol L3 Pin 2 [2, Unspecified, Line]
+    @(392.43 mm, 282.32 mm): Symbol R61 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(402.59 mm, 274.32 mm): Symbol C82 Pin 2 [2, Unspecified, Line]
+    @(402.59 mm, 290.32 mm): Symbol R62 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(419.10 mm, 326.39 mm): Symbol D2 Pin 1 [K, Unspecified, Line]
+    @(392.43 mm, 266.32 mm): Symbol L3 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(419.10 mm, 331.47 mm): Symbol D2 Pin 2 [A, Unspecified, Line]
+    @(448.31 mm, 302.26 mm): Symbol R60 Pin 2 [2, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(447.04 mm, 277.10 mm): Symbol R55 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(447.04 mm, 282.10 mm): Symbol R56 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(447.04 mm, 287.10 mm): Symbol R57 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(450.85 mm, 154.94 mm): Symbol CN5 Pin 1 [1, Unspecified, Line]
+    @(234.95 mm, 100.33 mm): Symbol U12 Pin 33 [IO40, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(450.85 mm, 157.48 mm): Symbol CN5 Pin 2 [2, Unspecified, Line]
+    @(392.43 mm, 250.32 mm): Symbol C80 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Power input are connected
+    ; warning
+    @(450.85 mm, 160.02 mm): Symbol CN5 Pin 3 [3, Unspecified, Line]
+    @(450.85 mm, 160.02 mm): Symbol #PWR? Pin 1 [Power input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(534.67 mm, 29.21 mm): Symbol D5 Pin 2 [K, Unspecified, Line]
+    @(591.82 mm, 38.10 mm): Symbol H1 Pin 6 [6, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(534.67 mm, 39.37 mm): Symbol D5 Pin 1 [A, Unspecified, Line]
+    @(574.04 mm, 38.10 mm): Symbol H1 Pin 5 [5, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(554.99 mm, 334.01 mm): Symbol D4 Pin 1 [K, Unspecified, Line]
+    @(554.99 mm, 334.01 mm): Symbol R34 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(554.99 mm, 344.17 mm): Symbol D4 Pin 2 [A, Unspecified, Line]
+    @(593.09 mm, 313.69 mm): Symbol U15 Pin 18 [GND, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(574.04 mm, 33.02 mm): Symbol H1 Pin 1 [1, Unspecified, Line]
+    @(574.04 mm, 35.56 mm): Symbol H1 Pin 3 [3, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(574.04 mm, 35.56 mm): Symbol H1 Pin 3 [3, Unspecified, Line]
+    @(234.95 mm, 105.41 mm): Symbol U12 Pin 31 [IO38, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(574.04 mm, 38.10 mm): Symbol H1 Pin 5 [5, Unspecified, Line]
+    @(574.04 mm, 40.64 mm): Symbol H1 Pin 7 [7, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(574.04 mm, 40.64 mm): Symbol H1 Pin 7 [7, Unspecified, Line]
+    @(574.04 mm, 43.18 mm): Symbol H1 Pin 9 [9, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(574.04 mm, 43.18 mm): Symbol H1 Pin 9 [9, Unspecified, Line]
+    @(610.87 mm, 96.52 mm): Symbol LED2 Pin 1 [C, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(582.93 mm, 171.45 mm): Symbol Q1 Pin 3 [D, Unspecified, Line]
+    @(392.43 mm, 282.32 mm): Symbol R61 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(588.01 mm, 163.83 mm): Symbol Q1 Pin 1 [G, Unspecified, Line]
+    @(588.01 mm, 163.83 mm): Symbol R32 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(591.82 mm, 33.02 mm): Symbol H1 Pin 2 [2, Unspecified, Line]
+    @(591.82 mm, 35.56 mm): Symbol H1 Pin 4 [4, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(591.82 mm, 35.56 mm): Symbol H1 Pin 4 [4, Unspecified, Line]
+    @(234.95 mm, 102.87 mm): Symbol U12 Pin 32 [IO39, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(591.82 mm, 38.10 mm): Symbol H1 Pin 6 [6, Unspecified, Line]
+    @(591.82 mm, 40.64 mm): Symbol H1 Pin 8 [8, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(591.82 mm, 40.64 mm): Symbol H1 Pin 8 [8, Unspecified, Line]
+    @(591.82 mm, 43.18 mm): Symbol H1 Pin 10 [10, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(591.82 mm, 43.18 mm): Symbol H1 Pin 10 [10, Unspecified, Line]
+    @(706.12 mm, 166.37 mm): Symbol U2 Pin 5 [IN, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(593.09 mm, 171.45 mm): Symbol Q1 Pin 2 [S, Unspecified, Line]
+    @(596.90 mm, 171.45 mm): Symbol D3 Pin 1 [K, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(593.09 mm, 273.05 mm): Symbol U15 Pin 2 [nSLEEP, Unspecified, Line]
+    @(554.99 mm, 334.01 mm): Symbol R34 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(593.09 mm, 298.45 mm): Symbol U15 Pin 1 [nFAULT, Unspecified, Line]
+    @(595.63 mm, 335.28 mm): Symbol R38 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(593.09 mm, 303.53 mm): Symbol U15 Pin 15 [SOA, Unspecified, Line]
+    @(563.88 mm, 269.24 mm): Symbol R37 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(593.09 mm, 306.07 mm): Symbol U15 Pin 16 [SOB, Unspecified, Line]
+    @(553.72 mm, 271.78 mm): Symbol R36 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(593.09 mm, 308.61 mm): Symbol U15 Pin 17 [SOC, Unspecified, Line]
+    @(541.02 mm, 274.32 mm): Symbol R35 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(593.09 mm, 313.69 mm): Symbol U15 Pin 18 [GND, Unspecified, Line]
+    @(618.49 mm, 340.36 mm): Symbol C72 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(596.90 mm, 190.50 mm): Symbol U10 Pin 3 [Vin, Unspecified, Line]
+    @(596.90 mm, 190.50 mm): Symbol C48 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(617.22 mm, 185.42 mm): Symbol U10 Pin 2 [Vout, Unspecified, Line]
+    @(621.03 mm, 185.42 mm): Symbol C47 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(617.22 mm, 195.58 mm): Symbol U10 Pin 1 [GND, Unspecified, Line]
+    @(621.03 mm, 195.58 mm): Symbol C47 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(635.00 mm, 185.42 mm): Symbol C54 Pin 2 [2, Unspecified, Line]
+    @(621.03 mm, 185.42 mm): Symbol C47 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(635.00 mm, 195.58 mm): Symbol C54 Pin 1 [1, Unspecified, Line]
+    @(621.03 mm, 195.58 mm): Symbol C47 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(646.43 mm, 267.97 mm): Symbol U15 Pin 20 [CP1, Unspecified, Line]
+    @(669.68 mm, 260.00 mm): Symbol C78 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(646.43 mm, 270.51 mm): Symbol U15 Pin 21 [CP2, Unspecified, Line]
+    @(679.84 mm, 260.00 mm): Symbol C78 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(646.43 mm, 280.67 mm): Symbol U15 Pin 23 [VIN, Unspecified, Line]
+    @(646.43 mm, 283.21 mm): Symbol U15 Pin 25 [VIN, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(646.43 mm, 283.21 mm): Symbol U15 Pin 25 [VIN, Unspecified, Line]
+    @(643.89 mm, 331.47 mm): Symbol C66 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(646.43 mm, 288.29 mm): Symbol U15 Pin 14 [VG, Unspecified, Line]
+    @(669.68 mm, 270.00 mm): Symbol C79 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(646.43 mm, 293.37 mm): Symbol U15 Pin 9 [SA, Unspecified, Line]
+    @(646.43 mm, 295.91 mm): Symbol U15 Pin 26 [SA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(646.43 mm, 300.99 mm): Symbol U15 Pin 11 [SB, Unspecified, Line]
+    @(646.43 mm, 303.53 mm): Symbol U15 Pin 24 [SB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(646.43 mm, 311.15 mm): Symbol U15 Pin 13 [SC, Unspecified, Line]
+    @(646.43 mm, 308.61 mm): Symbol U15 Pin 22 [SC, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(646.43 mm, 316.23 mm): Symbol U15 Pin 10 [LSS, Unspecified, Line]
+    @(646.43 mm, 318.77 mm): Symbol U15 Pin 12 [LSS, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(646.43 mm, 318.77 mm): Symbol U15 Pin 12 [LSS, Unspecified, Line]
+    @(643.89 mm, 341.63 mm): Symbol C66 Pin 1 [1, Input, Line]
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(655.32 mm, 289.56 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(655.32 mm, 289.56 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(665.48 mm, 284.48 mm): Vertical Wire, length 2.54 mm
+[unconnected_wire_endpoint]: Unconnected wire endpoint
+    ; warning
+    @(665.48 mm, 284.48 mm): Vertical Wire, length 2.54 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(669.68 mm, 250.00 mm): Symbol C77 Pin 1 [1, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(669.68 mm, 250.00 mm): Symbol C77 Pin 1 [1, Unspecified, Line]
+    @(646.43 mm, 275.59 mm): Symbol U15 Pin 19 [VCP, Unspecified, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(669.68 mm, 260.00 mm): Symbol C78 Pin 1 [1, Input, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(669.68 mm, 270.00 mm): Symbol C79 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(679.84 mm, 250.00 mm): Symbol C77 Pin 2 [2, Unspecified, Line]
+    @(646.43 mm, 280.67 mm): Symbol U15 Pin 23 [VIN, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(680.72 mm, 161.29 mm): Symbol U2 Pin 1 [BS, Unspecified, Line]
+    @(392.43 mm, 258.32 mm): Symbol C81 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(680.72 mm, 166.37 mm): Symbol U2 Pin 2 [GND, Unspecified, Line]
+    @(621.03 mm, 195.58 mm): Symbol C47 Pin 1 [1, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(680.72 mm, 171.45 mm): Symbol U2 Pin 3 [FB, Unspecified, Line]
+    @(402.59 mm, 282.32 mm): Symbol R61 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(680.72 mm, 306.07 mm): Symbol CN4 Pin 1 [1, Unspecified, Line]
+    @(646.43 mm, 295.91 mm): Symbol U15 Pin 26 [SA, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(680.72 mm, 308.61 mm): Symbol CN4 Pin 2 [2, Unspecified, Line]
+    @(646.43 mm, 303.53 mm): Symbol U15 Pin 24 [SB, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(680.72 mm, 311.15 mm): Symbol CN4 Pin 3 [3, Unspecified, Line]
+    @(646.43 mm, 311.15 mm): Symbol U15 Pin 13 [SC, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(706.12 mm, 161.29 mm): Symbol U2 Pin 6 [SW, Unspecified, Line]
+    @(402.59 mm, 258.32 mm): Symbol C81 Pin 2 [2, Input, Line]
+[pin_to_pin]: Pins of type Unspecified and Unspecified are connected
+    ; warning
+    @(706.12 mm, 166.37 mm): Symbol U2 Pin 5 [IN, Unspecified, Line]
+    @(646.43 mm, 280.67 mm): Symbol U15 Pin 23 [VIN, Unspecified, Line]
+[pin_to_pin]: Pins of type Unspecified and Input are connected
+    ; warning
+    @(706.12 mm, 171.45 mm): Symbol U2 Pin 4 [EN, Unspecified, Line]
+    @(402.59 mm, 298.32 mm): Symbol R63 Pin 2 [2, Input, Line]
+
+ ** ERC messages: 211  Errors 47  Warnings 164
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "kicad": {
+      "source": "aklofas/kicad-happy",
+      "sourceType": "github",
+      "skillPath": "skills/kicad/SKILL.md",
+      "computedHash": "f6ce8b086d52417496084f1b0a79eb3243abc8cd96a998acd05927ec569acc31"
+    }
+  }
+}
