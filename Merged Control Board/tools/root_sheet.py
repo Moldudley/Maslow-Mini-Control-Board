@@ -59,14 +59,16 @@ out = ['(kicad_sch', '\t(version 20260306)', '\t(generator "maslow-merge")',
        '\t(lib_symbols\n\t)']
 
 out.append(text("MASLOW MINI  -  MERGED CONTROL BOARD", 25, 30, 4.5, True))
-out.append(text("One PCB, the two original circuits kept intact side by side.", 25, 38, 2.2))
-out.append(text("The 2x5 board-to-board header (H1 on both boards) is gone.  Its four signal "
-                "pins become the two BoardCom nets below;", 25, 46, 2.0))
-out.append(text("its power pins (VIN x3, GND x3) become the shared VIN and GND rails, which now "
-                "simply span both sections.", 25, 52, 2.0))
-out.append(text("Everything else stays separate - in particular each section keeps its own "
-                "ESP32-S3, its own USB-C port and its own 3.3 V regulator", 25, 58, 2.0))
-out.append(text("(+3V3_MC and +3V3_DRV are two different nets).", 25, 64, 2.0))
+out.append(text("One PCB.  Both ESP32-S3 MCUs are retained and meet only on the BoardCom pair "
+                "below - everything else about the two", 25, 38, 2.2))
+out.append(text("original circuits is unchanged, apart from the redundancy that a single board "
+                "makes pointless.", 25, 44, 2.2))
+out.append(text("The 2x5 board-to-board header (H1 on both boards) is gone.  Its four signal pins "
+                "become the two BoardCom nets;", 25, 53, 2.0))
+out.append(text("its power pins (VIN x3, GND x3) become shared VIN and GND rails spanning both "
+                "sections.", 25, 59, 2.0))
+out.append(text("Each section still has its own ESP32-S3, its own USB-C programming port and its "
+                "own boot button.", 25, 65, 2.0))
 
 motor_pins = [("BOARDCOM_A", "bidirectional", MX + MW, MY + 13.97, 0, "right"),
               ("BOARDCOM_B", "bidirectional", MX + MW, MY + 24.13, 0, "right")]
@@ -90,12 +92,20 @@ out.append(text("(the crossover is the one the mated H1 headers used to make:", 
 out.append(text(" motor H1.1/1.3 -> driver H1.1/1.3 with BOARDCOM1/2 swapped between the boards)",
                 MX + MW + 6, MY + 50, 1.6))
 
-out.append(text("Shared across both sections:  VIN (XT60 input, was H1 pins 6/8/10)  and  GND "
-                "(was H1 pins 5/7/9).", 25, 165, 2.0))
-out.append(text("Renamed to stay separate:  3V3 -> +3V3_MC / +3V3_DRV,  BOOT -> BOOT_MC / BOOT_DRV.",
-                25, 172, 2.0))
+out.append(text("SHARED ACROSS BOTH SECTIONS", 25, 165, 2.4, True))
+out.append(text("VIN (XT60 input, was H1 pins 6/8/10)   -   GND (was H1 pins 5/7/9)", 25, 172, 2.0))
+out.append(text("+3V3   -   one LM2596 (U116, 3 A) now feeds both sections.  The driver board's "
+                "0.5 A MP2459 and its chain (U2, L3, D2, D6, C80, C81, R61-R63) are deleted;", 25, 178, 2.0))
+out.append(text("            D7 is kept and ORs the driver USB port's VBUS into the shared buck "
+                "input, so either USB port can still power the board.", 25, 184, 2.0))
+out.append(text("RST   -   one EN net.  SW2 resets both MCUs; R28 (10k) + C134 (1 uF) are the "
+                "single RC.  R128 and C30 deleted.", 25, 190, 2.0))
+out.append(text("Also removed as redundant:  D101 + R115 (second power-on LED; LED2 + R17 kept), "
+                "and D102/D103 changed SS14 -> SS36 to match D7.", 25, 196, 2.0))
+out.append(text("Kept separate on purpose:  BOOT_MC / BOOT_DRV, the two USB-C ports, and the "
+                "two MCUs themselves.", 25, 205, 2.0))
 out.append(text("Motor-section reference designators are the originals + 100 (U2 -> U102, ...) so "
-                "they do not collide with the driver section.", 25, 179, 2.0))
+                "they do not collide with the driver section.", 25, 211, 2.0))
 
 out.append('\t(sheet_instances\n'
            '\t\t(path "/"\n\t\t\t(page "1")\n\t\t)\n'

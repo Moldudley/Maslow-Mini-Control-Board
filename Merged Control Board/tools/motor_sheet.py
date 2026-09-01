@@ -31,13 +31,16 @@ fps = load_pcb_footprints(MOTOR_PCB)
 
 # --------------------------------------------------------------- net renaming
 RENAME = {
-    'VCC': 'VIN', '3V3': '+3V3_MC', 'BOOT': 'BOOT_MC',
+    'VCC': 'VIN',            # merges with the driver section (was H1 pins 6/8/10)
+    '3V3': '+3V3',           # one regulator now, so one 3.3 V rail for both sections
+    'U16_1': 'VIN_BUCK',     # shared buck input; the driver's D7 ORs into it too
+    'MCU_RST': 'RST',        # merges with the driver section's reset net
+    'BOOT': 'BOOT_MC',       # each MCU keeps its own boot button
     'BOARDCOM1': 'BOARDCOM_A', 'BOARDCOM2': 'BOARDCOM_B',
     'USB2_A5': 'CC1_MC', 'USB2_B5': 'CC2_MC',
-    'U16_1': 'VIN_BUCK_MC', 'L2_1': 'SW_BUCK_MC',
-    'D1_1': 'PWRLED_A', 'LED2_1': 'AXISLED_A', 'LED3_2': 'WIFILED_A',
+    'L2_1': 'SW_BUCK',
+    'LED2_1': 'AXISLED_A', 'LED3_2': 'WIFILED_A',
     'USBD+': 'USB_D+_MC', 'USBD-': 'USB_D-_MC', 'USB5V': 'VBUS_MC',
-    'MCU_RST': 'MCU_RST_MC',
 }
 AXIS = {'U2': 'TR', 'U3': 'TL', 'U5': 'BL', 'U6': 'BR'}
 for u, ax in AXIS.items():
@@ -72,8 +75,39 @@ FP_TO_SYM = {
     'SW-SMD_4P-L6.2-W6.4-P4.00-LS7.2': 'MaslowMerged:SW_Push_4P',
     'ESP32-S3-WROOM-1': 'ProPrj_Dri-easyedapro:ESP32-S3-WROOM-1(N8R2)',
 }
-DELETED = {'H1'}          # the 2x5 board-to-board header - the point of the merge
+DELETED = {
+    'H1',            # 2x5 board-to-board header - the point of the merge
+    'R28',           # EN pull-up; the driver section's R28 serves both MCUs now
+    'D1', 'R15',     # power-on LED; the driver section's LED2 + R17 is kept (3.6 mA vs 11 mA)
+}
 NC_PINS = {('SW1', '1'), ('SW1', '3'), ('USB2', 'A8'), ('USB2', 'B8')}
+
+# D2/D3 were SS14 (40 V / 1 A); the driver section's surviving D7 is SS36 (60 V / 3 A)
+# doing the identical job.  One BOM line, and more margin on a 24 V rail that also
+# carries six motor stages.
+OVERRIDE = {
+    'D2': {'symbol': 'ProPrj_Dri-easyedapro:SS36', 'value': 'SS36',
+           'footprint': 'Diode_SMD:D_SMA'},
+    'D3': {'symbol': 'ProPrj_Dri-easyedapro:SS36', 'value': 'SS36',
+           'footprint': 'Diode_SMD:D_SMA'},
+}
+
+def sym_of(ref):
+    o = OVERRIDE.get(ref)
+    return o['symbol'] if o and 'symbol' in o else FP_TO_SYM[fps[ref]['footprint']]
+
+def val_of(ref):
+    o = OVERRIDE.get(ref)
+    return o['value'] if o and 'value' in o else fps[ref]['value']
+
+def fpname_of(ref):
+    o = OVERRIDE.get(ref)
+    if o and 'footprint' in o:
+        return o['footprint']
+    lib_id = sym_of(ref)
+    if lib_id.startswith('ProPrj_Dri-easyedapro'):
+        return 'ProPrj_Dri-easyedapro:WIRELM-SMD_ESP32-S3-WROOM-1'
+    return f"MaslowMerged:{fps[ref]['footprint']}"
 
 libpins, libbody = {}, {}
 for lib, path in (('MaslowMerged', 'MaslowMerged.kicad_sym'),
@@ -91,11 +125,11 @@ def newref(ref):
 # ------------------------------------------------------------------- blocks
 BLOCKS = [
     ("24 V INPUT  /  3.3 V BUCK REGULATOR",
-     ['U1', 'C40', 'D2', 'D3', 'U16', 'L2', 'D5', 'C29', 'C31', 'C30', 'D1', 'R15']),
+     ['U1', 'C40', 'D2', 'D3', 'U16', 'L2', 'D5', 'C29', 'C31', 'C30']),
     ("USB-C PROGRAMMING PORT  (motor MCU)", ['USB2', 'R9', 'R14', 'C32', 'C33']),
     ("SD NAND", ['U9']),
     ("ESP32-S3-WROOM-1  -  MOTOR CONTROL MCU",
-     ['U10', 'R28', 'C34', 'SW1', 'C31x', 'R4', 'R30', 'R32', 'R7',
+     ['U10', 'C34', 'SW1', 'R4', 'R30', 'R32', 'R7',
       'LED2', 'R3', 'LED3', 'R2']),
     ("TCA9546A I2C MUX  /  AXIS ENCODER PORTS",
      ['U7', 'R17', 'R8', 'CN9', 'R25', 'R6', 'CN11', 'R26', 'R27',
@@ -133,7 +167,7 @@ def pin_labels(ref):
     schematic coordinates (x right, y down)."""
     f = fps[ref]
     out = []
-    for num, (px, py, pangle) in libpins[FP_TO_SYM[f['footprint']]].items():
+    for num, (px, py, pangle) in libpins[sym_of(ref)].items():
         sx, sy = px, -py
         lang = {0: 180, 180: 0, 90: 270, 270: 90}[int(pangle)]
         if (ref, num) in NC_PINS:
@@ -158,14 +192,14 @@ def extent(ref):
         elif lang == 0: xs.append(sx + L)      # rightwards
         elif lang == 90: ys.append(sy - L)     # upwards
         else: ys.append(sy + L)                # lang 270: downwards
-    body = libbody.get(FP_TO_SYM[fps[ref]['footprint']])
+    body = libbody.get(sym_of(ref))
     if body:                       # the drawn body can reach past the outermost pin
         bx0, bx1, by0, by1 = body
         xs += [bx0, bx1]; ys += [-by1, -by0]
     l, rt = min(xs) - 1.5, max(xs) + 1.5
     tp, bt = min(ys) - 1.5, max(ys) + 1.5
     # the reference and value are drawn left-justified just above the part
-    tw = max(len(newref(ref)) * 1.20, len(str(fps[ref]['value'])) * 1.00)
+    tw = max(len(newref(ref)) * 1.20, len(str(val_of(ref))) * 1.00)
     return l, max(rt, l + 1 + tw), tp, bt
 
 EXT = {r: extent(r) for r in fps if r not in DELETED}
@@ -196,7 +230,7 @@ def pack(members, max_w):
         y += h + GAP_Y
     return place, width, y
 
-MARGIN_X, MARGIN_Y = 18.0, 34.0
+MARGIN_X, MARGIN_Y = 18.0, 38.0
 BLOCK_PAD = 5.0
 P, FRAMES = {}, []
 cy = MARGIN_Y
@@ -267,7 +301,7 @@ def extract_symbol_block(path, name):
         raise KeyError(name)
     return txt[i:close_paren(txt, i)]
 
-used = sorted({FP_TO_SYM[fps[r]['footprint']] for r in P} | {'MaslowMerged:PWR_FLAG'})
+used = sorted({sym_of(r) for r in P} | {'MaslowMerged:PWR_FLAG'})
 out.append('\t(lib_symbols')
 for lib_id in used:
     lib, name = lib_id.split(':', 1)
@@ -279,12 +313,14 @@ for lib_id in used:
 out.append('\t)')
 
 out.append(text_note("MOTOR CONTROL SECTION", MARGIN_X, 14, 4.0))
-out.append(text_note("Derived from \"Four Motor Control Board M5\" - that board ships as a PCB "
-                     "with no schematic, so this sheet is reconstructed from its netlist.  "
-                     "H1 (2x5 board-to-board header) removed; BoardCom is now the hierarchical "
-                     "link to the driver section.  VCC renamed VIN and 3V3 renamed +3V3_MC.  "
+out.append(text_note("Derived from \"Four Motor Control Board M5\" - that board ships as a PCB with "
+                     "no schematic, so this sheet is reconstructed from its netlist.  H1 removed; "
+                     "BoardCom is the hierarchical link to the driver section.",
+                     MARGIN_X, 21, 1.9, bold=False))
+out.append(text_note("VCC -> VIN and 3V3 -> +3V3: this LM2596 now feeds BOTH sections and the "
+                     "driver's 0.5 A MP2459 is deleted.  R28/D1/R15 deleted as redundant.  "
                      "Reference designators are the originals + 100.",
-                     MARGIN_X, 22, 1.9, bold=False))
+                     MARGIN_X, 26, 1.9, bold=False))
 
 for title, x, y, w, h in FRAMES:
     out.append(block_rect(x, y, w, h, title))
@@ -292,7 +328,7 @@ for title, x, y, w, h in FRAMES:
 
 for ref in sorted(P, key=lambda r: (P[r][1], P[r][0])):
     f = fps[ref]
-    lib_id = FP_TO_SYM[f['footprint']]
+    lib_id = sym_of(ref)
     x, y = P[ref]
     nref = newref(ref)
     l, rt, t, b = EXT[ref]
@@ -301,11 +337,9 @@ for ref in sorted(P, key=lambda r: (P[r][1], P[r][0])):
                f'\t\t(dnp no)\n\t\t(uuid "{uid("sym", ref)}")')
     out.append(sym_prop("Reference", nref, x + l + 1, y + t - 3.4, hide=False,
                         size=1.5748, justify="left bottom"))
-    out.append(sym_prop("Value", f['value'], x + l + 1, y + t - 0.8, hide=False,
+    out.append(sym_prop("Value", val_of(ref), x + l + 1, y + t - 0.8, hide=False,
                         size=1.27, justify="left bottom"))
-    out.append(sym_prop("Footprint",
-                        f"MaslowMerged:{f['footprint']}" if lib_id.startswith('MaslowMerged')
-                        else "ProPrj_Dri-easyedapro:WIRELM-SMD_ESP32-S3-WROOM-1", 0, 0))
+    out.append(sym_prop("Footprint", fpname_of(ref), 0, 0))
     out.append(sym_prop("Datasheet", "", 0, 0))
     out.append(sym_prop("Description", "", 0, 0))
     out.append(sym_prop("Source Board", f"Four Motor Control Board M5 / {ref}", 0, 0))
@@ -325,7 +359,7 @@ for ref in sorted(P, key=lambda r: (P[r][1], P[r][0])):
 
 # ERC power-source markers for rails fed from a connector or a switching node
 flag_y = cy + 8.0
-for i, rail in enumerate(('VIN', '+3V3_MC', 'VBUS_MC', 'VIN_BUCK_MC')):
+for i, rail in enumerate(('VIN', '+3V3', 'VBUS_MC', 'VIN_BUCK')):
     x, y = snap(MARGIN_X + i * 55), snap(flag_y)
     out.append(f'\t(symbol\n\t\t(lib_id "MaslowMerged:PWR_FLAG")\n\t\t(at {x:g} {y:g} 0)\n'
                f'\t\t(unit 1)\n\t\t(exclude_from_sim no)\n\t\t(in_bom no)\n\t\t(on_board no)\n'

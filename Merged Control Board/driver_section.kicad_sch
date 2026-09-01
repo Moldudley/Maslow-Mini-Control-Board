@@ -8093,7 +8093,7 @@
 		)
 		(uuid "1053d9b3-a90a-4619-8e96-fd70ee51b326")
 	)
-	(text "200ma LDO / Power OR-ing with PMOS"
+	(text "Regulator is now U116 (LM2596-3.3) on the motor section"
 		(exclude_from_sim no)
 		(at 565.15 132.08 0)
 		(effects
@@ -8103,17 +8103,6 @@
 			(justify left bottom)
 		)
 		(uuid "162db111-a0b0-4d47-970f-3e0d3c2546f2")
-	)
-	(text "-PMOS gate VBUS pull-up to prevent\n  reverse current to buck output\n\n-This provides low voltage drop\n  BUCK starts at 3.3V default\n\n-Also prioritizes VBUS over BUCK"
-		(exclude_from_sim no)
-		(at 617.22 148.59 0)
-		(effects
-			(font
-				(size 1.4732 1.4732)
-			)
-			(justify left top)
-		)
-		(uuid "251edfb8-99a3-4707-a598-274883a64872")
 	)
 	(text "Control for the vacuum dust collection system"
 		(exclude_from_sim no)
@@ -8170,7 +8159,7 @@
 		)
 		(uuid "836a07ba-2230-44fe-afe4-2e7022be7d63")
 	)
-	(text "3.3V Regulator"
+	(text "3.3 V DECOUPLING"
 		(exclude_from_sim no)
 		(at 565.15 125.73 0)
 		(effects
@@ -8801,16 +8790,6 @@
 	)
 	(wire
 		(pts
-			(xy 125.73 158.75) (xy 125.73 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "310a7a64-7332-4975-8ec9-d75abe67261a")
-	)
-	(wire
-		(pts
 			(xy 588.01 96.52) (xy 586.74 96.52)
 		)
 		(stroke
@@ -8858,16 +8837,6 @@
 			(type default)
 		)
 		(uuid "3a9f9ba2-e5ec-4425-934a-22dea0e7dbf9")
-	)
-	(wire
-		(pts
-			(xy 665.48 284.48) (xy 665.48 281.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f747482-aa91-4372-a204-42aec6f7ccc3")
 	)
 	(wire
 		(pts
@@ -9101,16 +9070,6 @@
 	)
 	(wire
 		(pts
-			(xy 655.32 289.56) (xy 655.32 287.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6be8afdd-4be5-4eb9-b4eb-bcd1d2110684")
-	)
-	(wire
-		(pts
 			(xy 312.42 184.15) (xy 320.04 184.15)
 		)
 		(stroke
@@ -9178,16 +9137,6 @@
 			(type default)
 		)
 		(uuid "89bbb179-28e2-43c6-b102-2f8b311d35a5")
-	)
-	(wire
-		(pts
-			(xy 302.26 289.56) (xy 302.26 287.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8e625dbd-8460-4609-b3b7-09b49c5604ad")
 	)
 	(wire
 		(pts
@@ -9318,16 +9267,6 @@
 			(type default)
 		)
 		(uuid "aef4390e-d68e-458d-91c5-4b49394ae165")
-	)
-	(wire
-		(pts
-			(xy 125.73 146.05) (xy 125.73 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "af0fccbb-6219-450d-a8ed-5c6e4ec75220")
 	)
 	(wire
 		(pts
@@ -9591,16 +9530,6 @@
 	)
 	(wire
 		(pts
-			(xy 312.42 284.48) (xy 312.42 281.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7cf0785-06ba-4d2d-b5d1-ff812a4d12cc")
-	)
-	(wire
-		(pts
 			(xy 328.93 331.47) (xy 341.63 331.47)
 		)
 		(stroke
@@ -9825,28 +9754,6 @@
 			)
 		)
 	)
-	(global_label "EN_BK"
-		(shape input)
-		(at 402.59 298.32 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "05613d84-0999-4bd7-ad2f-ac9a7675fbca")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 402.59 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "GND"
 		(shape input)
 		(at 171.45 158.75 0)
@@ -9979,7 +9886,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 447.04 287.1 180)
 		(effects
@@ -10133,7 +10040,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 204.47 334.01 180)
 		(effects
@@ -10309,7 +10216,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 584.2 335.28 180)
 		(effects
@@ -10419,7 +10326,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 289.56 377.19 0)
 		(effects
@@ -10485,28 +10392,6 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
-		(shape input)
-		(at 402.59 266.32 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "29dfb155-8441-4676-9efb-06cbca3948f6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 402.59 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "CURB2"
 		(shape input)
 		(at 191.77 102.87 180)
@@ -10541,28 +10426,6 @@
 		(uuid "2aae3455-f46c-4c0f-b6ca-60a9ccc212b7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 593.09 278.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 402.59 290.32 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "2c782791-6bf0-4f8f-8015-6ee2f0eba693")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 402.59 290.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10627,50 +10490,6 @@
 			(justify left)
 		)
 		(uuid "aa830c42-2269-4abc-aa21-1d745a8dac9e")
-	)
-	(global_label "VIN_BUCK"
-		(shape input)
-		(at 706.12 166.37 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "2fbf318d-dc8c-48cf-9ff1-d113972014c9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 706.12 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VIN_BUCK"
-		(shape input)
-		(at 392.43 250.32 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "309a392d-5304-4c93-82d1-e67aa04d0afe")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 392.43 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 	)
 	(global_label "PHA1"
 		(shape input)
@@ -10870,7 +10689,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 170.18 133.35 90)
 		(effects
@@ -10882,28 +10701,6 @@
 		(uuid "3a15348a-9e51-4960-8cf3-6cdf501738fb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 170.18 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "EN_BK"
-		(shape input)
-		(at 706.12 171.45 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "3a6d1ba5-77a2-45ce-9c45-29790ee52419")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 706.12 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10926,28 +10723,6 @@
 		(uuid "3cd85f58-854e-486d-86cd-1f4ed070d6a7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 646.43 267.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
-		(at 419.1 331.47 270)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "3cece866-0c9e-42f5-bdcf-f45d062bccc1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 419.1 331.47 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11222,7 +10997,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 115.57 246.54 180)
 		(effects
@@ -11278,28 +11053,6 @@
 		(uuid "4ff3e84c-ab45-44dc-9d39-8369118defd3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 167.64 267.97 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "SW_BK"
-		(shape input)
-		(at 392.43 266.32 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "5132f543-ed9a-4bc2-a3ed-5fa22b216308")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 392.43 266.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11488,28 +11241,6 @@
 	)
 	(global_label "GND"
 		(shape input)
-		(at 680.72 166.37 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "5a4b9824-c661-470c-aa8c-1c0070ff12e1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 680.72 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "GND"
-		(shape input)
 		(at 694.69 341.63 0)
 		(effects
 			(font
@@ -11662,28 +11393,6 @@
 			)
 		)
 	)
-	(global_label "SW_BK"
-		(shape input)
-		(at 706.12 161.29 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "65107d83-b3c9-4852-a34f-db2e6353f47d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 706.12 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "GND"
 		(shape input)
 		(at 480.06 48.26 0)
@@ -11750,7 +11459,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 125.73 133.35 0)
 		(effects
@@ -11762,28 +11471,6 @@
 		(uuid "70799d83-ece7-4f4c-9462-a2807e55b1e1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 125.73 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "+3V3_DRV"
-		(shape input)
-		(at 392.43 282.32 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "739fe370-7dc7-4129-bff6-411035a5669f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 392.43 282.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12080,7 +11767,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 586.74 96.52 180)
 		(effects
@@ -12102,7 +11789,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 447.04 277.1 180)
 		(effects
@@ -12136,50 +11823,6 @@
 		(uuid "807d1682-2eaa-4134-8c6e-e562d65ad221")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 453.39 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "FB_BK"
-		(shape input)
-		(at 392.43 290.32 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "81b3f39d-68b5-4b33-b222-4ecc6d391ecf")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 392.43 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "FB_BK"
-		(shape input)
-		(at 680.72 171.45 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "81c6ba08-a57c-43ea-88fb-8e5937e150f9")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 680.72 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12432,28 +12075,6 @@
 			)
 		)
 	)
-	(global_label "VIN_BUCK"
-		(shape input)
-		(at 645 247.46 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "99a879a3-bea7-4320-b76e-1748e0785195")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 645 247.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "CURA1"
 		(shape input)
 		(at 167.64 262.89 180)
@@ -12652,7 +12273,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 433.07 297.18 180)
 		(effects
@@ -12916,28 +12537,6 @@
 			)
 		)
 	)
-	(global_label "BST"
-		(shape input)
-		(at 392.43 258.32 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "aa590cb3-026c-4404-ba3c-b99ea9ed5009")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 392.43 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "VIN"
 		(shape input)
 		(at 341.63 331.47 0)
@@ -13048,28 +12647,6 @@
 			)
 		)
 	)
-	(global_label "SW_BK"
-		(shape input)
-		(at 419.1 326.39 90)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "b44dd480-1054-42e8-81c8-92ac0998bc99")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 419.1 326.39 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "GND"
 		(shape input)
 		(at 125.73 261.54 0)
@@ -13136,7 +12713,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 170.18 85.09 180)
 		(effects
@@ -13202,7 +12779,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 635 185.42 0)
 		(effects
@@ -13280,28 +12857,6 @@
 		(uuid "bc4db347-713e-412a-b017-9bf1888304cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 452.12 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "BST"
-		(shape input)
-		(at 680.72 161.29 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "bceda56d-dec6-4eba-b9ff-67b20e5757b4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 680.72 161.29 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13422,7 +12977,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 115.57 269.24 180)
 		(effects
@@ -13510,7 +13065,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 271.78 173.99 180)
 		(effects
@@ -13818,28 +13373,6 @@
 			)
 		)
 	)
-	(global_label "VIN_BUCK"
-		(shape input)
-		(at 392.43 298.32 180)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify right)
-		)
-		(uuid "e595cb19-80e3-4e6b-84de-1c3b02d16d58")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 392.43 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "BH1"
 		(shape input)
 		(at 240.03 290.83 180)
@@ -14005,28 +13538,6 @@
 			)
 		)
 	)
-	(global_label "SW_BK"
-		(shape input)
-		(at 402.59 258.32 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "ee80ab2f-6db0-42a5-869e-198051beeeb4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 402.59 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
 	(global_label "PHB2"
 		(shape input)
 		(at 646.43 300.99 0)
@@ -14049,29 +13560,7 @@
 			)
 		)
 	)
-	(global_label "FB_BK"
-		(shape input)
-		(at 402.59 282.32 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "f04d1258-f3c9-4165-ba5e-c1275ed17ad0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 402.59 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 115.57 256.54 180)
 		(effects
@@ -14083,28 +13572,6 @@
 		(uuid "f2a13b1c-a342-4971-8ab6-4d0c2880a89c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 115.57 256.54 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "VIN"
-		(shape input)
-		(at 645 252.54 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "f2dc9ebf-fd3d-450f-a2d2-5c8c52b528ef")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 645 252.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14137,29 +13604,7 @@
 			)
 		)
 	)
-	(global_label "GND"
-		(shape input)
-		(at 402.59 250.32 0)
-		(effects
-			(font
-				(size 1.5748 1.5748)
-			)
-			(justify left)
-		)
-		(uuid "f465fe71-a0e5-455e-be68-783816807d6c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 402.59 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 621.03 185.42 0)
 		(effects
@@ -14203,7 +13648,7 @@
 			)
 		)
 	)
-	(global_label "+3V3_DRV"
+	(global_label "+3V3"
 		(shape input)
 		(at 392.43 274.32 180)
 		(effects
@@ -14644,7 +14089,7 @@
 		(dnp no)
 		(uuid "0744e465-27e2-42ac-8e28-253237f89c01")
 		(property "Reference" "D7"
-			(at 413.766 329.692 0)
+			(at 655.46 248.73 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14655,7 +14100,7 @@
 			)
 		)
 		(property "Value" "SS36"
-			(at 411.734 332.232 0)
+			(at 655.46 251.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15441,153 +14886,6 @@
 			(project "Maslow Mini Merged Board"
 				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
 					(reference "C70")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:SS36")
-		(at 645 250 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "123fff0b-9144-461b-a32b-c35090b7333b")
-		(property "Reference" "D6"
-			(at 413.766 329.692 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "SS36"
-			(at 411.734 332.232 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C2923967.html"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Schottky Diode, 60V, 3A, Vf=0.7V@3A, SMA/DO-214AC Package"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "SS36"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Jiangsu Changjing Electronics Technology (JSCJ)"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C2923967"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "SS36 60V 3A Schottky Diode SMA"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ca2cf973-2db3-4552-aa6f-6aa3ea82fd6f")
-		)
-		(pin "2"
-			(uuid "879993b4-7fe5-4d95-8a6b-4f83253ab93b")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -17731,154 +17029,6 @@
 		)
 	)
 	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:CL05B104KB54PNC")
-		(at 125.73 151.13 90)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "45edf151-32be-4a82-9ac3-39e99c76c4d2")
-		(property "Reference" "C30"
-			(at 129.54 151.13 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify right top)
-			)
-		)
-		(property "Value" "100nF"
-			(at 129.54 153.67 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify right top)
-			)
-		)
-		(property "Footprint" "ProPrj_Dri-easyedapro:C0402"
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20181009/C307331_222F7C870FD3EA5F46F538B483443886.pdf"
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "CL05B104KB54PNC"
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "SAMSUNG(三星)"
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C307331"
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "100nF ±10% 50V"
-			(at 125.73 151.13 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 125.73 151.13 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify right top)
-			)
-		)
-		(pin "1"
-			(uuid "e56d0b87-532c-40a4-bcc5-af637b44068e")
-		)
-		(pin "2"
-			(uuid "37412bea-2c4e-4ae3-a311-722b25bd28f1")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "C30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "ProPrj_Dri-easyedapro:GRM21BR61H106KE43L")
 		(at 321.7 270 0)
 		(unit 1)
@@ -18020,300 +17170,6 @@
 			(project "Maslow Mini Merged Board"
 				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
 					(reference "C76")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:SS36")
-		(at 419.1 328.93 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4728fe58-36eb-45fe-8978-6cc53d971e9d")
-		(property "Reference" "D2"
-			(at 413.766 329.692 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "SS36"
-			(at 411.734 332.232 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C2923967.html"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Schottky Diode, 60V, 3A, Vf=0.7V@3A, SMA/DO-214AC Package"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "SS36"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Jiangsu Changjing Electronics Technology (JSCJ)"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C2923967"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "SS36 60V 3A Schottky Diode SMA"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 419.1 328.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1a57aa2d-7c69-4815-8163-c615f649b314")
-		)
-		(pin "2"
-			(uuid "dc22477f-f59f-499f-9de1-f7bee747c85f")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:0402WGF1003TCE")
-		(at 397.51 282.32 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "497312b6-07ec-4210-a664-8bef229301d5")
-		(property "Reference" "R61"
-			(at 398.78 281.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "124kΩ"
-			(at 398.78 284.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "ProPrj_Dri-easyedapro:R0402"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C138062.html"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistance:124kΩ Tolerance:±1% Power(Watts):1/16W Package:0402 (MP2459 FB high-side; datasheet Table 1 fixes this at 124k because it sets loop bandwidth with the internal comp cap)"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "RC0402FR-07124KL"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C138062"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "124kΩ ±1% 1/16W 0402 Chip Resistor"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 397.51 282.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6d7f77d5-919e-4b71-81cb-a4102229e3ba")
-		)
-		(pin "2"
-			(uuid "e13e3c0f-c233-4bf9-94e5-2c6a547bde42")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "R61")
 					(unit 1)
 				)
 			)
@@ -19985,153 +18841,6 @@
 		)
 	)
 	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:0402WGF1002TCE")
-		(at 397.51 290.32 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "625002cb-7fce-4bc8-bd12-c35c11c82890")
-		(property "Reference" "R62"
-			(at 398.78 289.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "40.2kΩ"
-			(at 398.78 292.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "ProPrj_Dri-easyedapro:R0402"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C137983.html"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistance:40.2kΩ Tolerance:±1% Power(Watts):1/16W Package:0402 (MP2459 FB low-side; sets Vout=3.3V with 124k high-side)"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "RC0402FR-0740K2L"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C137983"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "40.2kΩ ±1% 1/16W 0402 Chip Resistor"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 397.51 290.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9258d72a-a541-4fe5-a59a-2c0adedcd1c2")
-		)
-		(pin "2"
-			(uuid "4e332958-60ec-4b3c-807b-a84df733ebe0")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "R62")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "ProPrj_Dri-easyedapro:GRM21BR61H106KE43L")
 		(at 643.89 336.55 90)
 		(unit 1)
@@ -20274,165 +18983,6 @@
 			(project "Maslow Mini Merged Board"
 				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
 					(reference "C66")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:MP2459")
-		(at 693.42 166.37 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "66876a52-035f-488c-a499-1e59b064d01a")
-		(property "Reference" "U2"
-			(at 694.69 165.1 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "MP2459GJ-Z"
-			(at 694.69 168.91 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C39578.html"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "4.5V-55V Input, 0.5A, 480kHz Non-Synchronous Step-Down Converter, SOT-23-6"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "MP2459GJ-Z"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Monolithic Power Systems"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C39578"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "MP2459GJ-Z Buck Converter SOT-23-6"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 693.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b265eac2-a71e-47bb-8862-5390057e5d9e")
-		)
-		(pin "2"
-			(uuid "21a0df7c-e583-43a2-a55d-3197a0d13061")
-		)
-		(pin "3"
-			(uuid "9929904c-1b66-4b38-9db7-51ba53ec6ca5")
-		)
-		(pin "4"
-			(uuid "e713ec86-6e00-4c1f-8433-892f4b4dacf9")
-		)
-		(pin "5"
-			(uuid "4c092727-c894-4127-9788-ee521bba1fef")
-		)
-		(pin "6"
-			(uuid "542aafb8-42b9-4150-bbaa-a7e5c7f0d6a2")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -23580,153 +22130,6 @@
 		)
 	)
 	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:PRS3015-470MT")
-		(at 397.51 266.32 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a6ae043f-8e0e-4593-98e2-707d89d2aef7")
-		(property "Reference" "L3"
-			(at 398.78 265.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "47uH"
-			(at 398.78 268.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_Bourns_SRN6045TA"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C5151734.html"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Inductance:47µH Tolerance:±20% Saturation Current:2A Rated Current:1.6A DCR:200mΩ Shielded SMD 6x6mm (MP2459 buck 24V->3.3V; ripple 126mA = 25% of 0.5A, Ipeak 0.563A, Isat clears the 1.5A max current limit)"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "SRN6045TA-470M"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Bourns"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C5151734"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "47µH ±20% 1.6A 200mΩ Shielded SMD Power Inductor 6x6mm"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 397.51 266.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7d6abf92-dca3-4461-b6f2-1e5e2fd48fea")
-		)
-		(pin "2"
-			(uuid "4bcffab1-1b88-482f-b70a-9f2ad96dd578")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "L3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "ProPrj_Dri-easyedapro:GRM21BR61H106KE43L")
 		(at 669.29 336.55 90)
 		(unit 1)
@@ -24748,153 +23151,6 @@
 		)
 	)
 	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:CL05B104KB54PNC")
-		(at 397.51 258.32 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c31b1ba0-de44-43b3-9a9b-a8d57ba1c933")
-		(property "Reference" "C81"
-			(at 398.78 257.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "100nF/50V"
-			(at 398.78 260.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "ProPrj_Dri-easyedapro:C0603"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C1591.html"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Capacitance:100nF Tolerance:±10% Voltage Rated:50V Temperature Coefficient:X7R Package:0603"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "CL10B104KB8NNNC"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Samsung Electro-Mechanics"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C1591"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "100nF ±10% 50V X7R 0603 MLCC"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 397.51 258.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f4430f6a-aeb9-4e4f-b38b-edf905aaf3a7")
-		)
-		(pin "2"
-			(uuid "47a45ed7-a2e6-426d-8084-1c5e5cfcfc7e")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "C81")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "ProPrj_Dri-easyedapro:0402CG220J500NT")
 		(at 167.79 279.91 90)
 		(unit 1)
@@ -25759,153 +24015,6 @@
 			(project "Maslow Mini Merged Board"
 				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
 					(reference "IR1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:0402WGF1003TCE")
-		(at 397.51 298.32 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d9ad755c-ce3f-41dd-bff2-82bd6c29c9d8")
-		(property "Reference" "R63"
-			(at 398.78 297.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "100kΩ"
-			(at 398.78 300.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "ProPrj_Dri-easyedapro:R0402"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C60491.html"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistance:100kΩ Tolerance:±1% Power(Watts):1/16W Package:0402"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "RC0402FR-07100KL"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C60491"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "100kΩ ±1% 1/16W 0402 Chip Resistor"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 397.51 298.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "856b2d2e-213e-4931-a02b-b3d33da98a3a")
-		)
-		(pin "2"
-			(uuid "2a6c38ab-51fa-4125-9ba3-77a47f4ff2b8")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "R63")
 					(unit 1)
 				)
 			)
@@ -27269,153 +25378,6 @@
 		)
 	)
 	(symbol
-		(lib_id "ProPrj_Dri-easyedapro:GRM21BR61H106KE43L")
-		(at 397.51 250.32 0)
-		(unit 1)
-		(body_style 0)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fe06f217-8718-4b0b-b836-942f24ad6920")
-		(property "Reference" "C80"
-			(at 398.78 249.05 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "10uF/50V"
-			(at 398.78 252.86 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.5748 1.5748)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "ProPrj_Dri-easyedapro:C0805"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.lcsc.com/product-detail/C440198.html"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Capacitance:10µF Tolerance:±10% Voltage Rated:50V Temperature Coefficient:X5R(no true X7R exists at this value/voltage/0805) Package:0805"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part" "GRM21BR61H106KE43L"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier Part" "C440198"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "LCSC"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part Name" "10µF ±10% 50V X5R 0805 MLCC"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Check" "true"
-			(at 397.51 250.32 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "648e762f-6dfc-4f0e-b4e3-111004c212b2")
-		)
-		(pin "2"
-			(uuid "699cb165-59ee-41df-8817-cb9d17255228")
-		)
-		(instances
-			(project "Maslow Mini Merged Board"
-				(path "/677efd1e-c5fa-44fb-a50a-537fb40b73b3/f70cb052-e84a-4ff3-acdd-d9fea1bb2774"
-					(reference "C80")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "ProPrj_Dri-easyedapro:0402WGF1002TCE")
 		(at 443.23 297.18 0)
 		(unit 1)
@@ -27573,7 +25535,7 @@
 		)
 		(uuid "5b94fd28-d5d8-4743-a908-883fdbcd36f4")
 	)
-	(text "Imported unchanged from \"ProPrj_Driver Board to share_2026-08-01\", except:"
+	(text "Imported from \"ProPrj_Driver Board to share_2026-08-01\", except:"
 		(at 556 24.6 0)
 		(effects
 			(font
@@ -27581,7 +25543,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "942e98b5-f7f8-4bcd-a83e-6933cdbc0d7d")
+		(uuid "ddfc1a39-ff44-4639-a953-d64c1bcc6162")
 	)
 	(text "  - H1 (2x5 board-to-board header) deleted; BOARDCOM1/2 at U12 are now hierarchical pins BOARDCOM_B / BOARDCOM_A"
 		(at 556 28.79 0)
@@ -27593,7 +25555,7 @@
 		)
 		(uuid "efc10f58-2efb-4124-a9ea-bd7205a83260")
 	)
-	(text "  - 3V3 -> +3V3_DRV and BOOT -> BOOT_DRV, to stay distinct from the motor section"
+	(text "  - MP2459 buck chain (U2, L3, D2, D6, C80, C81, R61-R63) deleted - the motor section's 3 A LM2596 now feeds both sections"
 		(at 556 32.98 0)
 		(effects
 			(font
@@ -27601,9 +25563,9 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "23a4a346-a20d-473d-a5a9-c3ee1b033013")
+		(uuid "d792b1ce-29d7-401e-a932-66a9a90edf18")
 	)
-	(text "  - VIN and GND unchanged, and now merge with the motor section (they are what H1 pins 6/8/10 and 5/7/9 carried)"
+	(text "  - D7 kept, and now ORs this port's VBUS into the shared buck input VIN_BUCK"
 		(at 556 37.169999999999995 0)
 		(effects
 			(font
@@ -27611,7 +25573,27 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f97a4607-955f-4cbc-a789-3f96e4ad01cd")
+		(uuid "2ef62e46-e549-4fdf-a16d-b2b8dd1d601d")
+	)
+	(text "  - C30 deleted; R28 + SW2 + C134 (1 uF, motor section) are now the EN RC and reset button for BOTH MCUs"
+		(at 556 41.35999999999999 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "b342511d-3ab1-416b-a732-b710a56e7b6c")
+	)
+	(text "  - 3V3 -> +3V3 and BOOT -> BOOT_DRV.  +3V3, VIN, GND and RST are shared with the motor section; BOOT is not"
+		(at 556 45.54999999999999 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "1441b44f-0e44-41cf-a055-894bd6db8447")
 	)
 	(embedded_fonts no)
 )

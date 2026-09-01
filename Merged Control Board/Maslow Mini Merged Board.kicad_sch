@@ -24,7 +24,7 @@
 		)
 		(uuid "75e71ab6-c1c7-4205-a978-1a0a4cce98d3")
 	)
-	(text "One PCB, the two original circuits kept intact side by side."
+	(text "One PCB.  Both ESP32-S3 MCUs are retained and meet only on the BoardCom pair below - everything else about the two"
 		(at 25 38 0)
 		(effects
 			(font
@@ -32,47 +32,47 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "682d560d-5cce-415c-a07d-60e08046bca6")
+		(uuid "f6a4620e-6544-4291-a9a1-6b11f82ff103")
 	)
-	(text "The 2x5 board-to-board header (H1 on both boards) is gone.  Its four signal pins become the two BoardCom nets below;"
-		(at 25 46 0)
+	(text "original circuits is unchanged, apart from the redundancy that a single board makes pointless."
+		(at 25 44 0)
+		(effects
+			(font
+				(size 2.2 2.2)
+			)
+			(justify left bottom)
+		)
+		(uuid "0b028b89-cee1-4261-aa1c-98544736ad0c")
+	)
+	(text "The 2x5 board-to-board header (H1 on both boards) is gone.  Its four signal pins become the two BoardCom nets;"
+		(at 25 53 0)
 		(effects
 			(font
 				(size 2.0 2.0)
 			)
 			(justify left bottom)
 		)
-		(uuid "fc7458ff-9b3e-48fd-ab5e-cb63c4d63230")
+		(uuid "8b16150d-2dfa-4af5-a834-bb8d51b442fd")
 	)
-	(text "its power pins (VIN x3, GND x3) become the shared VIN and GND rails, which now simply span both sections."
-		(at 25 52 0)
+	(text "its power pins (VIN x3, GND x3) become shared VIN and GND rails spanning both sections."
+		(at 25 59 0)
 		(effects
 			(font
 				(size 2.0 2.0)
 			)
 			(justify left bottom)
 		)
-		(uuid "ea602480-c9de-4614-aba2-a0de12bb05a4")
+		(uuid "7c240f0b-c72b-4545-a37d-7b8b29dbf7f7")
 	)
-	(text "Everything else stays separate - in particular each section keeps its own ESP32-S3, its own USB-C port and its own 3.3 V regulator"
-		(at 25 58 0)
+	(text "Each section still has its own ESP32-S3, its own USB-C programming port and its own boot button."
+		(at 25 65 0)
 		(effects
 			(font
 				(size 2.0 2.0)
 			)
 			(justify left bottom)
 		)
-		(uuid "dfec742c-40cb-4407-a90c-0db90c42fdc3")
-	)
-	(text "(+3V3_MC and +3V3_DRV are two different nets)."
-		(at 25 64 0)
-		(effects
-			(font
-				(size 2.0 2.0)
-			)
-			(justify left bottom)
-		)
-		(uuid "20711200-740f-4a3e-a5bf-e1fa874254a4")
+		(uuid "50793d87-8240-43e6-a80f-ad7c91ecdfcb")
 	)
 	(sheet
 		(at 39.37 88.9)
@@ -291,17 +291,18 @@
 		)
 		(uuid "e9a7ae66-0604-49d0-a959-01ac03b9a35c")
 	)
-	(text "Shared across both sections:  VIN (XT60 input, was H1 pins 6/8/10)  and  GND (was H1 pins 5/7/9)."
+	(text "SHARED ACROSS BOTH SECTIONS"
 		(at 25 165 0)
 		(effects
 			(font
-				(size 2.0 2.0)
+				(size 2.4 2.4)
+				(bold yes)
 			)
 			(justify left bottom)
 		)
-		(uuid "69b59d99-6e9c-4dd2-a4b6-6b47fd35b11c")
+		(uuid "e6b5c360-9180-4699-ad66-02fd1d337ac5")
 	)
-	(text "Renamed to stay separate:  3V3 -> +3V3_MC / +3V3_DRV,  BOOT -> BOOT_MC / BOOT_DRV."
+	(text "VIN (XT60 input, was H1 pins 6/8/10)   -   GND (was H1 pins 5/7/9)"
 		(at 25 172 0)
 		(effects
 			(font
@@ -309,17 +310,67 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "30a22787-a481-4c91-ae6f-d0861fd86977")
+		(uuid "1bc3f254-1294-4e95-ad3d-1f9cbc1bea5d")
 	)
-	(text "Motor-section reference designators are the originals + 100 (U2 -> U102, ...) so they do not collide with the driver section."
-		(at 25 179 0)
+	(text "+3V3   -   one LM2596 (U116, 3 A) now feeds both sections.  The driver board's 0.5 A MP2459 and its chain (U2, L3, D2, D6, C80, C81, R61-R63) are deleted;"
+		(at 25 178 0)
 		(effects
 			(font
 				(size 2.0 2.0)
 			)
 			(justify left bottom)
 		)
-		(uuid "f4bf3d7d-1928-46da-ad11-fa1482557560")
+		(uuid "a3a32daa-1ff0-4e98-a899-004437801c7a")
+	)
+	(text "            D7 is kept and ORs the driver USB port's VBUS into the shared buck input, so either USB port can still power the board."
+		(at 25 184 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+			)
+			(justify left bottom)
+		)
+		(uuid "827fc64e-e3bb-4079-a1bf-e76ee78dafb5")
+	)
+	(text "RST   -   one EN net.  SW2 resets both MCUs; R28 (10k) + C134 (1 uF) are the single RC.  R128 and C30 deleted."
+		(at 25 190 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+			)
+			(justify left bottom)
+		)
+		(uuid "ba471cd6-c9a3-4762-a4d1-5330c4653169")
+	)
+	(text "Also removed as redundant:  D101 + R115 (second power-on LED; LED2 + R17 kept), and D102/D103 changed SS14 -> SS36 to match D7."
+		(at 25 196 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a8b1fe7-54ea-402d-a73a-07e31f8206ae")
+	)
+	(text "Kept separate on purpose:  BOOT_MC / BOOT_DRV, the two USB-C ports, and the two MCUs themselves."
+		(at 25 205 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+			)
+			(justify left bottom)
+		)
+		(uuid "a7ab3749-c2b2-410b-a875-9eb588d68126")
+	)
+	(text "Motor-section reference designators are the originals + 100 (U2 -> U102, ...) so they do not collide with the driver section."
+		(at 25 211 0)
+		(effects
+			(font
+				(size 2.0 2.0)
+			)
+			(justify left bottom)
+		)
+		(uuid "c351dbe1-a5df-42d6-a21b-409528d636d6")
 	)
 	(sheet_instances
 		(path "/"
