@@ -1,0 +1,50 @@
+(version 1)
+
+# ---------------------------------------------------------------------------
+# MP6541A (TQFN-26 6x6mm, FCQFN) fine-pitch land pattern
+#
+# MPS's recommended land pattern places the centre power bars 0.100 mm from the
+# side pads:
+#
+#     side pad   x = +/-2.50, half-width 0.40  ->  inner edge +/-2.10
+#     centre bar x = +/-1.80, half-width 0.20  ->  outer edge +/-2.00
+#                                                  gap = 0.100 mm
+#
+# That is tighter than the board's 0.2 mm Default netclass clearance, so DRC
+# reports 16 pad-pairs per device (U14, U15) that are inherent to the part and
+# cannot be fixed by moving anything.
+#
+# This rule relaxes clearance to 0.1 mm ONLY where both items belong to an
+# MP6541A footprint, so the global 0.2 mm still applies to everything routed
+# near the part.
+#
+# FAB CHECK: 0.10 mm (~4 mil) spacing exceeds JLCPCB's standard 0.127 mm
+# process -- confirm your fabricator supports it before relying on this.
+# ---------------------------------------------------------------------------
+
+(rule "MP6541A intra-footprint clearance"
+    (condition "A.Library_Link == 'ProPrj_Dri-easyedapro:TQFN-26 (6X6MM)' && B.Library_Link == 'ProPrj_Dri-easyedapro:TQFN-26 (6X6MM)'")
+    (constraint clearance (min 0.1mm))
+)
+
+# ---------------------------------------------------------------------------
+# USB-C receptacle and tactile switches -- edge clearance reviewed & accepted
+#
+# USB1 is an edge-mounted Type-C receptacle: its pads and the VBUS traces
+# feeding them necessarily sit close to the connector's own board cutout, and
+# its SHELL through-holes sit close to the outer edge.  SW2/SW3 are likewise
+# placed hard against the edge by design.
+#
+# Observed range for this set: 0.155 .. 0.462 mm against the 0.5 mm global
+# rule.  0.15 mm covers it.
+#
+# Scope note: this deliberately does NOT cover the BEAMBREAK track, which runs
+# 0.30-0.41 mm from the INTERNAL circular cutout on Inner1.  That one is a
+# routing choice, not connector geometry, and should be moved rather than
+# excused.
+# ---------------------------------------------------------------------------
+
+(rule "USB-C / switch edge clearance (reviewed, accepted)"
+    (condition "A.Reference == 'USB1' || A.Reference == 'SW2' || A.Reference == 'SW3' || A.insideCourtyard('USB1')")
+    (constraint edge_clearance (min 0.15mm))
+)
