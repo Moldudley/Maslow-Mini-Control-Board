@@ -7,7 +7,8 @@ A third KiCad project that puts both existing boards on one PCB:
 | `../Motor Controller Board/` | "Four Motor Control Board M5" — ESP32-S3, 4× DRV8876 belt-axis drivers, TCA9546A I²C mux, SD NAND, LM2596 3.3 V buck, XT60 inlet | **PCB only, no schematic** |
 | `../KiCad Boards/` | "Driver Board 2026-08-01" — ESP32-S3, 2× MP6541A 3-phase drivers, MP2459 3.3 V buck, beam-break homing, vacuum control | schematic + PCB |
 
-**Scope: schematic only.** There is no `.kicad_pcb` in this project yet — layout is the next step.
+**Scope: schematic, plus a partially-placed PCB.** The mechanically-constrained parts are placed;
+the rest are staged off-board for manual placement. Nothing is routed yet.
 
 The merge is in two parts: joining the two circuits, and then removing the redundancy that a
 single board makes pointless. **169 parts / 61 BOM lines → 156 parts / 53 BOM lines.**
@@ -116,6 +117,7 @@ Motor-section reference designators are **the originals + 100** (`U2`→`U102`, 
 ```
 Maslow Mini Merged Board.kicad_pro    project
 Maslow Mini Merged Board.kicad_sch    root sheet — the two sections + the BoardCom link
+Maslow Mini Merged Board.kicad_pcb    board — 20 parts placed, 136 staged, nothing routed
 motor_control_section.kicad_sch       page 2
 driver_section.kicad_sch              page 3
 MaslowMerged.kicad_sym                symbols authored for the motor-control parts
@@ -124,6 +126,45 @@ ProPrj_Dri-easyedapro.kicad_sym       symbols carried over from the driver board
 ProPrj_Dri-easyedapro.pretty/         footprints carried over from the driver board
 tools/                                the scripts that generated all of the above
 ```
+
+## PCB layout
+
+`tools/pcb_layout.py` builds the board. **20 parts keep the exact position they had on their
+own board** — every motor driver IC and every connector:
+
+| | parts |
+|---|---|
+| motor drivers | `U102` `U103` `U105` `U106` (DRV8876), `U14` `U15` (MP6541A) |
+| power / data | `U101` (XT60), `USB102`, `USB1` |
+| motor outputs | `CN101` `CN103` `CN104` `CN110`, `CN3` `CN4` |
+| axis encoders | `CN105` `CN109` `CN111` `CN112` |
+| vacuum | `CN5` |
+
+Each section keeps its internal geometry exactly. The motor section sits at its original
+coordinates; the **driver section is translated as a rigid body by (+71.5, −4.5) mm** so the two
+sit side by side with a 5 mm gap and their tops aligned. Board side and rotation are preserved
+for every part — the driver section's ICs and connectors are on `B.Cu`, as they were.
+
+The remaining 136 parts are staged to the right of the board in two labelled groups, one per
+section, sorted by reference, each keeping its original rotation and board side.
+
+Footprint instances are lifted **verbatim** out of the two source PCBs, so pad shapes, back-side
+mirroring, custom padstacks and 3D model references all survive; only position, reference, net
+names and the schematic path are rewritten. The two exceptions are `D102`/`D103`, whose footprint
+changed with the SS14 → SS36 swap; those are built fresh from `Diode_SMD:D_SMA`.
+
+### The board outline is a placeholder
+
+`Edge.Cuts` is a plain 143 × 115 mm rectangle. Both original board outlines — including their
+internal cutouts, which are clearly mechanical — are drawn on `Dwgs.User` so you can see exactly
+where each board sat and build the real outline from them.
+
+### Not placed, but arguably should be
+
+`IR1` and `CGQ1` are the beam-break homing pair; their positions are as mechanically constrained
+as any connector, but they are not connectors and not motor drivers, so they went to staging. Say
+the word and they move to their original spots too. The indicator LEDs (`LED102`, `LED103`,
+`LED2`) are in the same category if the enclosure has light pipes.
 
 ## How each section was produced
 
@@ -165,6 +206,27 @@ The thirteen pins the merged schematic carries that the sources do not are pads 
 simply unconnected on the source PCB and are now explicit: `SW101` 1/3, `U109` 1/7 (SD NAND
 DAT1/DAT2, unused in SPI mode), `USB102` A8/B8 (SBU), and seven spare ESP32 IOs on `U110`.
 
+`tools/verify_pcb.py` then checks the board against the schematic: every component present
+exactly once with the right footprint, every pad carrying the net the schematic gives it
+(compared as a partition again), every footprint's schematic path pointing at the right sheet and
+symbol, and every part that was supposed to keep its position sitting exactly where it was to
+within its section's translation. Current result:
+
+```
+components: schematic 156, board 156
+multi-pad nets: schematic 124, board 124
+schematic paths: 156 unique across 156 footprints
+fixed parts: 20 checked against their source-board coordinates
+PASS
+```
+
+PCB DRC reports 424 unconnected items — correct, nothing is routed — and 260 other findings, all
+of which are pre-existing on the source boards: the motor board's own baseline has 106 `padstack`,
+62 `text_height` and 179 `silk_overlap` findings from its EasyEDA import, and the driver board's
+has 63 `lib_footprint_mismatch`. The merged board has *fewer* silkscreen violations than either
+source because the staged parts are spread out. No clearance, copper or hole-to-hole violations
+exist because there is no routing yet.
+
 ERC over the whole project: 203 findings, all inherited from the driver board's EasyEDA import —
 `pin_to_pin` and `pin_not_driven` caused by that library typing its pins *Unspecified*,
 `endpoint_off_grid` on that sheet's original geometry, and one `power_pin_not_driven` on its
@@ -203,6 +265,13 @@ python3 tools/footprints.py
 python3 tools/motor_sheet.py
 python3 tools/driver_sheet.py
 python3 tools/root_sheet.py
+python3 tools/pcb_layout.py
+```
+
+and to re-check everything:
+
+```bash
+python3 tools/verify_netlist.py && python3 tools/verify_pcb.py
 ```
 
 `motor_sheet.py` reads the analyzed motor PCB JSON and `driver_sheet.py` reads the original
